@@ -1,0 +1,333 @@
+@import "~bootstrap/scss/bootstrap";
+
+body, html {
+	font-family: "Roboto", sans-serif;
+	height: 100%;
+      }
+
+// to remove styling from NavLink
+div.card {
+  color:black;
+  text-decoration: none;
+}
+
+div.card:link { text-decoration: none; }
+div.card:visited { text-decoration: none; }
+div.card:hover { text-decoration: none; }
+div.card:active { text-decoration: none; }
+
+// the top navigation bar
+#top-nav {
+  background-color: #0466c8;
+  padding:10px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  z-index: 1;
+}
+
+#top-menu {
+  flex: 1 1 1;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 25%;
+}
+
+#top-menu button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#top-nav .nav-title {
+  align-self: center;
+}
+
+// search bar
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  // border: 1px solid black;
+  -webkit-text-fill-color: grey;
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+#search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#note-search {
+  flex: 1 1 1;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 30px;
+}
+
+#note-search input {
+  height: 40px;
+  // max-width: 300px;
+}
+
+#note-search button {
+  height: 40px;
+}
+
+// list of posts in the home page
+#post-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,25%);
+  // grid-template-columns: fit-content(autofit, 40%); 
+  padding: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0px;
+  margin-top: 25px;
+}
+
+#post-list li {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#post-list .card {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 0px;
+  padding-left: 25px;
+  padding-right: 25px;
+  transition: 1s;
+  height: 500px;
+  overflow: hidden;
+}
+
+.list-post-hover {
+  display: None;
+  transition: display 1s;
+}
+
+#post-list .card:hover {
+  background-color: rgba(4, 102, 200, 0.5);
+  .list-post-hover {
+    display: block;
+  }
+  .list-post-image {
+    height: 250px;
+  } 
+}
+
+#post-list .card-header {
+  background-color: rgba(108, 117, 125, 0.25);
+}
+
+#post-list .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#post-list .list-post-image {
+  width: auto;
+  height: 295px;
+  transition: height 1s;
+}
+
+#post-list .list-post-tags {
+  font-style: italic;
+}
+
+#post-list .list-post-times {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+// page to create new post
+#new-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#new-post div {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.registration-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+// sign in 
+
+#signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#signin div {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#signin textarea{
+  resize: none;
+}
+
+// sign up 
+
+#signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#signup div {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#signup textarea{
+  resize: none;
+}
+// post details
+
+// displaying post details editing
+.post-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px; 
+}
+
+.post-edit div.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px; 
+}
+
+div.input-group {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+// border incorrect textarea
+textarea.alert-textarea {
+	border-color: red;
+}
+
+// displaying post details card
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-details-card {
+  margin-top: 75px;
+  margin-bottom: 75px;
+  width: 50%;
+}
+
+.post-details-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.post-details-image {
+  max-height: 300px;
+  width: auto;
+}
+
+.post-details-title {
+  text-align: center;
+}
+
+.post-details-tags {
+  font-style: italic;
+}
+
+.post-details-times {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.post-details-content {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form.post-details-buttons {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post-details-buttons button {
+  margin: 5px;
+}
+
+// error page
+.error-card {
+  margin-top: 75px;
+}
+
+@media only screen and (max-width: 900px) {
+
+  #top-nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #top-menu {
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  #note-search {
+    margin-bottom: 10px;
+  }
+  #post-list {
+    grid-template-columns: repeat(auto-fit,100%);
+  }
+
+}
